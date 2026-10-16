@@ -1,0 +1,99 @@
+{
+  "objective": "Build a portable Journaling Door and dynamic workflow toolkit for Codex and Claude Code users",
+  "surface": "codex",
+  "topology": "worker-verifier-repair-verifier",
+  "status": "completed",
+  "completedAt": "2026-10-16T22:07:08.649962+00:00",
+  "summary": "Local portable starter built and independently verified. Remote publication and license remain pending.",
+  "members": [
+    {
+      "id": "lead",
+      "role": "lead",
+      "requestedModel": "current-session",
+      "resolvedModel": "unknown",
+      "routingProven": false,
+      "routingEvidence": [],
+      "task": "Scope, integration review, risk and handoff",
+      "status": "completed"
+    },
+    {
+      "id": "source-scout",
+      "role": "scout",
+      "requestedModel": "gpt-5.4-mini",
+      "resolvedModel": "unknown",
+      "routingProven": false,
+      "routingEvidence": [],
+      "task": "Read-only source discovery",
+      "status": "failed"
+    },
+    {
+      "id": "portable-builder",
+      "role": "worker",
+      "requestedModel": "gpt-5.6-luna",
+      "resolvedModel": "unknown",
+      "routingProven": false,
+      "routingEvidence": [],
+      "task": "Source discovery, toolkit implementation, documentation and first repairs",
+      "status": "completed"
+    },
+    {
+      "id": "integrity-repair",
+      "role": "worker",
+      "requestedModel": "gpt-5.6-terra",
+      "resolvedModel": "unknown",
+      "routingProven": false,
+      "routingEvidence": [],
+      "task": "Repair path alias and malformed-receipt defects",
+      "status": "completed"
+    },
+    {
+      "id": "release-verifier",
+      "role": "verifier",
+      "requestedModel": "gpt-5.6-luna",
+      "resolvedModel": "unknown",
+      "routingProven": false,
+      "routingEvidence": [],
+      "task": "Independent acceptance checks and adversarial rechecks",
+      "status": "completed"
+    }
+  ],
+  "routingNotes": [
+    "Scout runtime rejected unsupported model before task execution; builder took over discovery.",
+    "Role configuration records requested routing only. No independent model-resolution receipt is available; savings are not claimed."
+  ],
+  "verification": [
+    {
+      "name": "unit regressions",
+      "status": "pass",
+      "evidence": "python3 -m unittest discover -s tests -v; independent reviewer observed 10/10 pass"
+    },
+    {
+      "name": "fictional full-loop demo",
+      "status": "pass",
+      "evidence": "python3 examples/demo.py"
+    },
+    {
+      "name": "privacy scan",
+      "status": "pass",
+      "evidence": "python3 -m door_workflow --root . privacy-check"
+    },
+    {
+      "name": "portable skill install",
+      "status": "pass",
+      "evidence": "Independent reviewer installed four SKILL.md folders into isolated .agents/skills destination"
+    },
+    {
+      "name": "adversarial integrity checks",
+      "status": "pass",
+      "evidence": "Alias overlap and malformed receipts fail closed; deliverables hash-bound; WIP and export boundaries rechecked"
+    }
+  ],
+  "limitations": [
+    "Receipt integrity does not prove actual agent execution or semantic completion.",
+    "Reduced JSON toolkit; no full private vault UI or automated model runner.",
+    "License undecided; no remote, commits, push or publication performed."
+  ],
+  "externalActionsRequested": [],
+  "nextHumanAction": "Choose license and approve remote creation/publication if desired.",
+  "nextMachineAction": "Use local README and fictional demo; prepare approved release after license decision."
+}

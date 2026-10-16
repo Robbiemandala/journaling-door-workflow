@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials*
+.runtime/
+.agents/
+.claude/
+artifacts/
+notes/
+data/**
+!data/**/
+!data/**/.gitkeep

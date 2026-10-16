@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "journaling-door-workflow"
+version = "0.1.0"
+description = "Portable local-first journaling provenance and honest workflow receipts"
+requires-python = ">=3.10"
+
+[project.scripts]
+door-workflow = "door_workflow.cli:main"
